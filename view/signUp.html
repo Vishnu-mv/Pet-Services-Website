@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+    body{
+    margin: 0;
+    padding: 0;
+    height: 96vh;
+    overflow: hidden;
+    background-color: gainsboro;
+    }
+
+
+.intro{
+    text-align: center;
+}
+
+.center{
+    border: 1px solid red;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 2.5rem;
+    background-color: rgb(0,0,0,0.5);
+}
+
+form .txt_field{
+    margin-top: 1rem ;
+}
+
+form .log_but{
+    padding-left: 6rem;
+    padding-top: 3rem;
+}
+
+.txt_field input{
+    width: 100%;
+}
+
+form .signup_but{
+    margin: 3rem;
+}
+.signup_but a:hover{
+   cursor: pointer;
+   color: white;
+   text-decoration: underline;
+}
+
+.log_but input:hover{
+    background-color: black;
+    cursor: pointer;
+    color: whitesmoke;
+}
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Hey There! Welcome To "The Pet Care"</h1>
+        <h3>
+
+            Please Sign-In To Continue
+        </h3>
+    </div>
+    <div class="center">
+        <h1>SignUp / Register Here</h1>
+
+        <form method="POST" action="/register">
+            <div class="txt_field">
+                <label for="">UserName:</label>
+                <br>
+                <input type="text" name="UserName" required placeholder="Enter Your Name">
+            </div>
+            <div class="txt_field">
+                <label for="">email:</label>
+                <br>
+                <input type="email" name="email" required placeholder="Enter a Valid email">
+            </div>
+            <div class="txt_field">
+                <label for="">Mobile:</label>
+                <br>
+                <input type="text" minlength="10" maxlength="10" name="Mobile" required placeholder="Mobile number">
+            </div>
+            <div class="txt_field">
+                <label for="">Password:</label>
+                <br>
+                <input type="text" name="Password" required placeholder="Enter Password to be Set">
+            </div>
+            <div class="log_but">
+                <input type="submit" value="SignUp">
+            </div>
+            <div class="signup_but">
+                Already a Member?
+                <!-- <a href="../view/signIn.html">Sign-in</a> -->
+                <a href="/signin">Sign-in</a>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

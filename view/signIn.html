@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="../view/signIn.css">
+    <style>
+        body{
+    padding: 0; 
+    margin: 0;
+    background-color: gainsboro; 
+}
+.intro{
+    text-align: center;
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center form{
+    width: 25%;
+}
+
+.txt_field{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.txt_field input{
+    width: 100%;
+}
+form .signup_but{
+    margin-top: 1rem;
+}
+
+form .signup_but a:hover{
+    color: red;
+}
+.log_but input:hover{
+    background-color: black;
+    cursor: pointer;
+    color: whitesmoke;
+    text-decoration: underline;
+}
+    </style>
+
+</head>
+    <html>
+
+    <body>
+        <div class="intro">
+            <h1>Hey There! Welcome Back to "The Pet Care"</h1>
+        </div>
+
+            <div class="center">
+                <h1>Please Login to Continue</h1>
+                <form method="POST" action="/login">
+                    <div class="txt_field">
+                        <label for="">Mobile:</label><br>
+                        <input type="text" minlength="10" maxlength="10" name="Mobile" required
+                            placeholder="Enter your registered number">
+                    </div>
+                    <div class="txt_field">
+                        <label for="">Password:</label><br>
+                        <input type="text" name="Password" required placeholder="Enter Password">
+                    </div>
+                    <div class="log_but">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup_but">
+                        Not a Member yet?
+                        <a href="../view/signUp.html">Sign-up</a>
+                    </div>
+
+                </form>
+            </div>
+    </body>
+
+    </html>
+</body>
+
+</html>

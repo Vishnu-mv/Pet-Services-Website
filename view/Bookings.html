@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+    <base href="/">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 96vh;
+            overflow: hidden;
+            background-color: rgba(102, 139, 91, 0.185);
+        }
+
+        /* Navigation Bar  */
+        .navbar {
+            width: 100%;
+            height: auto;
+            margin: -20px auto;
+            background-color: black;
+           
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 5px;
+
+        }
+
+        nav ul li a {
+            color: rgb(9, 255, 21);
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        nav ul li a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: white;
+        }
+
+        /* End of nav  */
+        .intro {
+            text-align: center;
+        }
+
+        .par{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            /* border: 1px solid black; */
+            /* justify-content: center; */
+        }
+        .center {
+            width: 600px;
+            border: 1px solid black;
+            /* background-color: black; */
+
+            border-radius: 3%;
+
+        }
+        .center h1{
+            text-align: center;
+            /* color: white; */
+            color: black;
+        }
+        .txt_field{
+            margin: 1rem auto 0 auto;
+            /* color: white; */
+            color: black;
+
+        }
+        .txt_field input{
+            width: 98.5%;
+            height: 25px;
+            border-radius: 1%;
+            
+
+        }
+        .btn{
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .btn input:hover{
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <html>
+    <body>
+        <div class="intro">
+            <h1>Customer Satisfaction is Our Major priority</h1>
+            <p>Please fill the form to book a service</p>
+        </div>
+
+        <div class="par">
+            <div class="center">
+                <h1>Booking</h1>
+                <form method="POST" action="/booking">
+                    <div class="txt_field">
+                        <label for="">petName:</label><br>
+                        <input type="text" name="petName" required placeholder="Enter Petname">
+                    </div>
+                    <div class="txt_field">
+                        <label for="">date:</label><br>
+                        <input type="date"  name="date" required
+                            placeholder="select date">
+                    </div>
+                    <div class="txt_field">
+                        <label for="">time:</label><br>
+                        <input type="number" name="time" min="8" max="18" required
+                            placeholder="service only from 8 to 18">
+                    </div>
+                    <div class="txt_field">
+                        <label for="service">service-type:</label> <br>
+                    <select name="service" id="service">
+                        <option value="Bath and Full HairCut">Bath and Full HairCut</option>
+                        <option value="Walking">Walking</option>
+                        <option value="Training">Training</option>
+                    </select>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Book-slot">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+
+    </html>
+</body>
+
+</html>
